@@ -64,7 +64,7 @@ export function Button({
         className: classNames([
           size === "small" && "h-4 w-4",
           size === "medium" && "h-5 w-5",
-          size === "medium" && "h-6 w-6",
+          size === "large" && "h-6 w-6",
         ]),
       });
     }
