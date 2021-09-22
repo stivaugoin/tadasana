@@ -43,6 +43,12 @@ Medium.args = {
   size: "medium",
 };
 
+export const Large = Template.bind({});
+Large.args = {
+  children: "Large",
+  size: "large",
+};
+
 export const Danger = Template.bind({});
 Danger.args = {
   children: "Danger",
@@ -92,6 +98,16 @@ export const AllButtons = (): JSX.Element => {
   return (
     <Rows>
       <Row>
+        <Button size="large" variant="primary">
+          Primary
+        </Button>
+        <Button size="large" startIcon={CodeIcon} variant="primary">
+          Primary
+        </Button>
+        <Button size="large" variant="primary">
+          <CodeIcon />
+        </Button>
+
         <Button size="medium" variant="primary">
           Primary
         </Button>
@@ -114,6 +130,16 @@ export const AllButtons = (): JSX.Element => {
       </Row>
 
       <Row>
+        <Button size="large" variant="normal">
+          Default
+        </Button>
+        <Button size="large" startIcon={CodeIcon} variant="normal">
+          Default
+        </Button>
+        <Button size="large" variant="normal">
+          <CodeIcon />
+        </Button>
+
         <Button size="medium" variant="normal">
           Default
         </Button>
@@ -136,6 +162,16 @@ export const AllButtons = (): JSX.Element => {
       </Row>
 
       <Row>
+        <Button size="large" variant="success">
+          Success
+        </Button>
+        <Button size="large" startIcon={CodeIcon} variant="success">
+          Success
+        </Button>
+        <Button size="large" variant="success">
+          <CodeIcon />
+        </Button>
+
         <Button size="medium" variant="success">
           Success
         </Button>
@@ -158,6 +194,16 @@ export const AllButtons = (): JSX.Element => {
       </Row>
 
       <Row>
+        <Button size="large" variant="danger">
+          Danger
+        </Button>
+        <Button size="large" startIcon={CodeIcon} variant="danger">
+          Danger
+        </Button>
+        <Button size="large" variant="danger">
+          <CodeIcon />
+        </Button>
+
         <Button size="medium" variant="danger">
           Danger
         </Button>
@@ -180,6 +226,16 @@ export const AllButtons = (): JSX.Element => {
       </Row>
 
       <Row>
+        <Button size="large" variant="warning">
+          Warning
+        </Button>
+        <Button size="large" startIcon={CodeIcon} variant="warning">
+          Warning
+        </Button>
+        <Button size="large" variant="warning">
+          <CodeIcon />
+        </Button>
+
         <Button size="medium" variant="warning">
           Warning
         </Button>

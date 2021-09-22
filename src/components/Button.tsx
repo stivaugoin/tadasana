@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { HTMLAttributes } from "react";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  size?: "medium" | "small";
+  size?: "large" | "medium" | "small";
   startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
   type?: "button" | "reset" | "submit";
   variant?: "danger" | "normal" | "primary" | "success" | "warning";
@@ -42,6 +42,7 @@ export function Button({
             className={classNames([
               size === "small" && "w-3.5 h-3.5",
               size === "medium" && "w-4 h-4",
+              size === "large" && "w-5 h-5",
             ])}
           />
           {children}
@@ -63,6 +64,7 @@ export function Button({
         className: classNames([
           size === "small" && "h-4 w-4",
           size === "medium" && "h-5 w-5",
+          size === "large" && "h-6 w-6",
         ]),
       });
     }
@@ -83,6 +85,8 @@ export function Button({
         [size === "small" && isIcon && "p-1.5"],
         [size === "medium" && !isIcon && "px-4 py-2 text-sm"],
         [size === "medium" && isIcon && "p-2"],
+        [size === "large" && !isIcon && "px-4 py-2 text-base"],
+        [size === "large" && isIcon && "p-2"],
 
         // Variant
         [
