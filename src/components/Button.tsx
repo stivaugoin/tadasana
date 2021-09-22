@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { HTMLAttributes } from "react";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  size?: "medium" | "small" | "large";
+  size?: "medium" | "small";
   startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
   type?: "button" | "reset" | "submit";
   variant?: "danger" | "normal" | "primary" | "success" | "warning";
@@ -91,7 +91,7 @@ export function Button({
         ],
         [
           variant === "normal" &&
-            "text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-gray-500",
+            "text-gray-700 bg-primary-100 hover:bg-primary-200 focus:ring-primary-500",
         ],
         [
           variant === "primary" &&
