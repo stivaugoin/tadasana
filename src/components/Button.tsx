@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { HTMLAttributes } from "react";
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  size?: "medium" | "small";
+  size?: "medium" | "small" | "large";
   startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
   type?: "button" | "reset" | "submit";
   variant?: "danger" | "normal" | "primary" | "success" | "warning";
