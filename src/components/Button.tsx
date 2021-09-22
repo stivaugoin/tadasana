@@ -91,7 +91,7 @@ export function Button({
         ],
         [
           variant === "normal" &&
-            "text-gray-700 bg-primary-100 hover:bg-primary-200 focus:ring-primary-500",
+            "text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-gray-500",
         ],
         [
           variant === "primary" &&
