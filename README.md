@@ -47,7 +47,7 @@ yarn add tadasana
 // tailwind.config.js
 
 module.exports = {
-  presets: [require("./node_modules/tadasana/tailwind/preset.ts")],
+  presets: [require("./node_modules/tadasana/src/tailwind/preset.ts")],
   purge: [
     "./node_modules/tadasana/src/components/*.tsx",
     "./src/**/*.tsx", // <- Your path
