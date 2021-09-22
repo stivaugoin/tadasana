@@ -14,7 +14,7 @@ export function Button({
   size = "medium",
   startIcon: StartIcon,
   type = "button",
-  variant = "primary",
+  variant = "normal",
   ...rest
 }: ButtonProps): JSX.Element {
   const isIcon = (() => {
