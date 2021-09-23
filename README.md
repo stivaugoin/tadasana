@@ -8,7 +8,7 @@
     Design system based on TailwindCSS
     <br/>
     <br/>
-    <a href="https://www.chromatic.com/library?appId=614a7f31a4fdfd003a07d4a0"><strong>Explore the docs »</strong></a>
+    <a href="https://main--614a7f31a4fdfd003a07d4a0.chromatic.com/"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
   </p>
