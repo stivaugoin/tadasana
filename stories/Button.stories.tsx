@@ -1,7 +1,7 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React from "react";
-import { Button } from "../src/components/Button";
+import React, { Fragment } from "react";
+import { Button, ButtonProps } from "../src/components/Button";
 import { Row } from "./helpers/Row";
 import { Rows } from "./helpers/Rows";
 
@@ -94,168 +94,47 @@ StartIcon.args = {
 };
 StartIcon.storyName = "StartIcon";
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: "Disabled",
+  disabled: true,
+};
+
+const stories: {
+  variants: Array<ButtonProps["variant"]>;
+  sizes: Array<ButtonProps["size"]>;
+} = {
+  variants: ["normal", "primary", "success", "danger", "warning"],
+  sizes: ["small", "medium", "large"],
+};
+
 export const AllButtons = (): JSX.Element => {
   return (
     <Rows>
-      <Row>
-        <Button size="large" variant="primary">
-          Primary
-        </Button>
-        <Button size="large" startIcon={CodeIcon} variant="primary">
-          Primary
-        </Button>
-        <Button size="large" variant="primary">
-          <CodeIcon />
-        </Button>
-
-        <Button size="medium" variant="primary">
-          Primary
-        </Button>
-        <Button size="medium" startIcon={CodeIcon} variant="primary">
-          Primary
-        </Button>
-        <Button size="medium" variant="primary">
-          <CodeIcon />
-        </Button>
-
-        <Button size="small" variant="primary">
-          Primary
-        </Button>
-        <Button size="small" startIcon={CodeIcon} variant="primary">
-          Primary
-        </Button>
-        <Button size="small" variant="primary">
-          <CodeIcon />
-        </Button>
-      </Row>
-
-      <Row>
-        <Button size="large" variant="normal">
-          Default
-        </Button>
-        <Button size="large" startIcon={CodeIcon} variant="normal">
-          Default
-        </Button>
-        <Button size="large" variant="normal">
-          <CodeIcon />
-        </Button>
-
-        <Button size="medium" variant="normal">
-          Default
-        </Button>
-        <Button size="medium" startIcon={CodeIcon} variant="normal">
-          Default
-        </Button>
-        <Button size="medium" variant="normal">
-          <CodeIcon />
-        </Button>
-
-        <Button size="small" variant="normal">
-          Default
-        </Button>
-        <Button size="small" startIcon={CodeIcon} variant="normal">
-          Default
-        </Button>
-        <Button size="small" variant="normal">
-          <CodeIcon />
-        </Button>
-      </Row>
-
-      <Row>
-        <Button size="large" variant="success">
-          Success
-        </Button>
-        <Button size="large" startIcon={CodeIcon} variant="success">
-          Success
-        </Button>
-        <Button size="large" variant="success">
-          <CodeIcon />
-        </Button>
-
-        <Button size="medium" variant="success">
-          Success
-        </Button>
-        <Button size="medium" startIcon={CodeIcon} variant="success">
-          Success
-        </Button>
-        <Button size="medium" variant="success">
-          <CodeIcon />
-        </Button>
-
-        <Button size="small" variant="success">
-          Success
-        </Button>
-        <Button size="small" startIcon={CodeIcon} variant="success">
-          Success
-        </Button>
-        <Button size="small" variant="success">
-          <CodeIcon />
-        </Button>
-      </Row>
-
-      <Row>
-        <Button size="large" variant="danger">
-          Danger
-        </Button>
-        <Button size="large" startIcon={CodeIcon} variant="danger">
-          Danger
-        </Button>
-        <Button size="large" variant="danger">
-          <CodeIcon />
-        </Button>
-
-        <Button size="medium" variant="danger">
-          Danger
-        </Button>
-        <Button size="medium" startIcon={CodeIcon} variant="danger">
-          Danger
-        </Button>
-        <Button size="medium" variant="danger">
-          <CodeIcon />
-        </Button>
-
-        <Button size="small" variant="danger">
-          Danger
-        </Button>
-        <Button size="small" startIcon={CodeIcon} variant="danger">
-          Danger
-        </Button>
-        <Button size="small" variant="danger">
-          <CodeIcon />
-        </Button>
-      </Row>
-
-      <Row>
-        <Button size="large" variant="warning">
-          Warning
-        </Button>
-        <Button size="large" startIcon={CodeIcon} variant="warning">
-          Warning
-        </Button>
-        <Button size="large" variant="warning">
-          <CodeIcon />
-        </Button>
-
-        <Button size="medium" variant="warning">
-          Warning
-        </Button>
-        <Button size="medium" startIcon={CodeIcon} variant="warning">
-          Warning
-        </Button>
-        <Button size="medium" variant="warning">
-          <CodeIcon />
-        </Button>
-
-        <Button size="small" variant="warning">
-          Warning
-        </Button>
-        <Button size="small" startIcon={CodeIcon} variant="warning">
-          Warning
-        </Button>
-        <Button size="small" variant="warning">
-          <CodeIcon />
-        </Button>
-      </Row>
+      {stories.variants.map((variant) => {
+        return (
+          <Fragment key={variant}>
+            {stories.sizes.map((size) => {
+              return (
+                <Row key={`${variant}-${size}`}>
+                  <Button size={size} variant={variant}>
+                    {variant}
+                  </Button>
+                  <Button disabled size={size} variant={variant}>
+                    {variant}
+                  </Button>
+                  <Button size={size} startIcon={CodeIcon} variant={variant}>
+                    {variant}
+                  </Button>
+                  <Button size={size} variant={variant}>
+                    <CodeIcon />
+                  </Button>
+                </Row>
+              );
+            })}
+          </Fragment>
+        );
+      })}
     </Rows>
   );
 };

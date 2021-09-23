@@ -1,7 +1,11 @@
 import classNames from "classnames";
-import React, { HTMLAttributes } from "react";
+import React, { InputHTMLAttributes } from "react";
 
-interface InputProps extends HTMLAttributes<HTMLInputElement> {
+export interface InputProps
+  extends React.DetailedHTMLProps<
+    Omit<InputHTMLAttributes<HTMLInputElement>, "size">,
+    HTMLInputElement
+  > {
   hasError?: boolean;
   size?: "medium" | "small";
   type: HTMLInputElement["type"];
