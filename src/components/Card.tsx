@@ -10,7 +10,7 @@ export function Card({ children, className }: CardProps): JSX.Element {
   return (
     <div
       className={classnames(
-        "flex-shrink-0 w-full bg-white border border-gray-300 rounded-lg",
+        "flex-shrink-0 w-full bg-white border border-gray-200 rounded-lg",
         className
       )}
     >
@@ -24,7 +24,7 @@ export interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 function Body({ children, className }: CardBodyProps): JSX.Element {
-  return <div className={classnames("px-4", className)}>{children}</div>;
+  return <div className={classnames("p-4", className)}>{children}</div>;
 }
 
 function Header({
@@ -41,7 +41,7 @@ function Header({
   title: string;
 }): JSX.Element {
   return (
-    <div className={classnames("px-4 py-5", className)}>
+    <div className={classnames("px-4 pt-4 pb-1", className)}>
       <div
         className={classnames(
           "flex items-center justify-between",
@@ -80,7 +80,7 @@ function Footer({
   return (
     <div
       className={classnames(
-        "px-4 py-5 flex space-x-4",
+        "px-4 pb-4 pt-1 flex space-x-4",
         {
           "justify-around": justify === "around",
           "justify-between": justify === "between",
