@@ -1,6 +1,6 @@
 {
   "name": "tadasana",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "author": "Steve Bourgoin",
   "main": "dist/index.js",
@@ -55,7 +55,7 @@
     "@storybook/addons": "^6.3.8",
     "@storybook/react": "^6.3.8",
     "@tailwindcss/forms": "^0.3.3",
-    "@types/react": "^17.0.20",
+    "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "autoprefixer": "^10.3.4",
     "babel-loader": "^8.2.2",
