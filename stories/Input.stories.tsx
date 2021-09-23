@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Input } from "../src/components/Input";
+import { Input, InputProps } from "../src/components/Input";
 import { Row } from "./helpers/Row";
 import { Rows } from "./helpers/Rows";
 
@@ -41,18 +41,43 @@ Medium.args = {
   size: "medium",
 };
 
+const stories: {
+  sizes: Array<InputProps["size"]>;
+} = {
+  sizes: ["small", "medium"],
+};
+
 export const AllInputs = (): JSX.Element => {
   return (
-    <div className="w-full max-w-lg">
+    <div className="w-full max-w-sm">
       <Rows>
-        <Row>
-          <Input size="medium" type="text" />
-          <Input size="small" type="text" />
-        </Row>
-        <Row>
-          <Input hasError size="medium" type="text" />
-          <Input hasError size="small" type="text" />
-        </Row>
+        {stories.sizes.map((size) => (
+          <Row key={size}>
+            <Input size={size} type="text" />
+            <Input
+              defaultValue={`${size} - defaultValue`}
+              size={size}
+              type="text"
+            />
+            <Input
+              defaultValue={`${size} - disabled`}
+              disabled
+              size={size}
+              type="text"
+            />
+            <Input
+              defaultValue={`${size} - hasError`}
+              hasError
+              size={size}
+              type="text"
+            />
+            <Input
+              placeholder={`${size} - placeholder`}
+              size={size}
+              type="text"
+            />
+          </Row>
+        ))}
       </Rows>
     </div>
   );
