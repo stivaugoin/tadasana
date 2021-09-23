@@ -25,5 +25,10 @@ module.exports = {
       "hover-hover": { raw: "(hover: hover)" },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      cursor: ["disabled"],
+      opacity: ["disabled"],
+    },
+  },
 };
