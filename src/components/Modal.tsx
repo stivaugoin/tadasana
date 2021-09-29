@@ -98,7 +98,6 @@ function CloseButton(): JSX.Element {
         "focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2",
       ])}
       onClick={onRequestClose}
-      role="button"
     >
       <span className="sr-only">Close</span>
       <XIcon aria-hidden="true" className="w-6 h-6" />
