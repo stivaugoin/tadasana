@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export function useModal(
-  defaultOpen: boolean = false
-): {
+export function useModal(defaultOpen: boolean = false): {
   close: () => void;
   isOpen: boolean;
   open: () => void;
