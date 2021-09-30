@@ -9,7 +9,7 @@ export default {
   title: "Component/Modal",
   component: Modal,
   parameters: {
-    chromatic: { delay: 500 },
+    chromatic: { delay: 2000 },
   },
 } as ComponentMeta<typeof Modal>;
 
