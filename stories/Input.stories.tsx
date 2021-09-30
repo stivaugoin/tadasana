@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Input, InputProps } from "../src/components/Input";
@@ -16,6 +17,7 @@ export default {
       },
     },
   },
+  parameters: { badges: [BADGE.BETA] },
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => (

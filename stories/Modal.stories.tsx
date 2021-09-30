@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Button } from "../src/components/Button";
@@ -8,6 +9,7 @@ import { useModal } from "../src/hooks/useModal";
 export default {
   title: "Component/Modal",
   component: Modal,
+  parameters: { badges: [BADGE.BETA, BADGE.EXPERIMENTAL] },
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => {

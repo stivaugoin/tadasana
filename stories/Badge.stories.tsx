@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { CodeIcon } from "@heroicons/react/solid";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
@@ -16,6 +17,7 @@ export default {
     startIcon: { control: null, table: { disable: true } },
     variant: { control: "inline-radio" },
   },
+  parameters: { badges: [BADGE.STABLE] },
 } as ComponentMeta<typeof Badge>;
 
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />;
