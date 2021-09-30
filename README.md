@@ -21,7 +21,7 @@
 [![CI](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml)
 [![Chromatic](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml)
 [![size](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml)
-  
+
   </div>
 </p>
 
