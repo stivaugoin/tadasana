@@ -8,6 +8,9 @@ import { useModal } from "../src/hooks/useModal";
 export default {
   title: "Component/Modal",
   component: Modal,
+  parameters: {
+    chromatic: { delay: 500 },
+  },
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => {
