@@ -5,18 +5,27 @@
   </a>
 
   <p align="center">
-    Design system based on TailwindCSS
+    Design system based on Tailwind CSS
     <br/>
     <br/>
     <a href="https://main--614a7f31a4fdfd003a07d4a0.chromatic.com/"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
   </p>
+  
+  <div align="center">
+  
+![npm](https://img.shields.io/npm/v/tadasana)
+![npm](https://img.shields.io/npm/dw/tadasana)
+
+[![CI](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml)
+[![Chromatic](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml)
+[![size](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml)
+  
+  </div>
 </p>
 
-<!-- BADGE -->
-
-Tadasana lets start projects quickly with a basic set of component using a simple style that can be adapted easily with TailwindCSS.
+:warning: Tadasana is not ready to use in production.
 
 ## Getting Started
 
