@@ -8,22 +8,19 @@ import { useModal } from "../src/hooks/useModal";
 export default {
   title: "Component/Modal",
   component: Modal,
-  parameters: {
-    chromatic: { delay: 2000 },
-  },
 } as ComponentMeta<typeof Modal>;
 
 const Template: ComponentStory<typeof Modal> = (args) => {
   const { close, isOpen, open } = useModal(true);
 
   return (
-    <div className="w-full h-full">
+    <>
       <Button onClick={open} variant="primary">
         Open modal
       </Button>
 
       <Modal {...args} onRequestClose={close} isOpen={isOpen} />
-    </div>
+    </>
   );
 };
 
