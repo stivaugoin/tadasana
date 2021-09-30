@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof Modal> = (args) => {
   const { close, isOpen, open } = useModal(true);
 
   return (
-    <div>
+    <div className="w-full h-full">
       <Button onClick={open} variant="primary">
         Open modal
       </Button>
