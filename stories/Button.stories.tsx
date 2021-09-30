@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { CodeIcon } from "@heroicons/react/solid";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React, { Fragment } from "react";
@@ -8,7 +9,7 @@ import { Rows } from "./helpers/Rows";
 export default {
   title: "Component/Button",
   component: Button,
-  parameters: { actions: { argTypesRegex: "^on.*" } },
+  parameters: { actions: { argTypesRegex: "^on.*" }, badges: [BADGE.BETA] },
   argTypes: {
     children: {
       control: "text",

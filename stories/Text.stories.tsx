@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Text } from "../src/components/Text";
@@ -22,6 +23,7 @@ export default {
     size: { control: "inline-radio" },
     variant: { control: "inline-radio" },
   },
+  parameters: { badges: [BADGE.BETA, BADGE.EXPERIMENTAL] },
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;

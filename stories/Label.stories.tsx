@@ -1,3 +1,4 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Input } from "../src/components/Input";
@@ -11,6 +12,7 @@ export default {
       defaultValue: "text",
     },
   },
+  parameters: { badges: [BADGE.STABLE] },
 } as ComponentMeta<typeof Label>;
 
 const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;

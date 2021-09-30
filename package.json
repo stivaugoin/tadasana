@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
+    "@geometricpanda/storybook-addon-badges": "^0.2.1",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@size-limit/preset-small-lib": "^5.0.3",
