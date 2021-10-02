@@ -11,7 +11,7 @@ function useModalContext() {
 
 interface ModalProps {
   children: ReactNode;
-  isOpen?: boolean;
+  isOpen: boolean;
   onRequestClose: () => void;
 }
 
