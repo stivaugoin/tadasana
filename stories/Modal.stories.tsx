@@ -17,11 +17,11 @@ const Template: ComponentStory<typeof Modal> = (args) => {
 
   return (
     <>
-      <Button onClick={open} variant="primary">
+      <Button onClick={() => open()} variant="primary">
         Open modal
       </Button>
 
-      <Modal {...args} onRequestClose={close} isOpen={isOpen} />
+      <Modal {...args} onRequestClose={close} isOpen={isOpen()} />
     </>
   );
 };

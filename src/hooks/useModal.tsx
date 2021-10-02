@@ -1,16 +1,20 @@
-import { useState } from "react";
+import React from "react";
 
-export function useModal(defaultOpen: boolean = false): {
+export function useModal(defaultOpen?: boolean): {
   close: () => void;
-  isOpen: boolean;
-  open: () => void;
-  toggle: () => void;
+  isOpen: (id?: string) => boolean;
+  open: (id?: string) => void;
+  toggle: (id?: string) => void;
 } {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [show, setShow] = React.useState<boolean | string>(
+    defaultOpen ?? false
+  );
 
-  const close = () => setIsOpen(false);
-  const open = () => setIsOpen(true);
-  const toggle = () => setIsOpen(!isOpen);
+  const close = () => setShow(false);
+  const isOpen = (id?: string) =>
+    typeof id === "string" ? show === id : Boolean(show);
+  const open = (id?: string) => setShow(id ?? true);
+  const toggle = (id?: string) => setShow(show ? false : id ?? !show);
 
   return {
     close,
