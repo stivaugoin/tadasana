@@ -79,7 +79,6 @@ export function Button({
   return (
     <button
       className={classNames(
-        className,
         "inline-flex justify-center items-center rounded-full shadow-sm font-medium border border-transparent flex-shrink-0",
         "focus:outline-none focus:ring-2 focus:ring-offset-2",
         "disabled:opacity-50 disabled:cursor-not-allowed",
@@ -116,8 +115,10 @@ export function Button({
 
         // StartIcon
         [Boolean(StartIcon) && "gap-1.5 flex"],
-        [Boolean(StartIcon) && size === "small" && "pr-3.5"]
+        [Boolean(StartIcon) && size === "small" && "pr-3.5"],
+        className
       )}
+      type={type}
       {...rest}
     >
       {renderChildren()}
