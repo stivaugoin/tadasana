@@ -17,7 +17,7 @@
     "start": "dts watch",
     "build": "dts build",
     "test": "dts test --passWithNoTests",
-    "lint": "dts lint src test stories",
+    "lint": "dts lint src stories",
     "prettier": "prettier . --check",
     "prepare": "dts build",
     "size": "size-limit",
