@@ -48,7 +48,7 @@ function Header({
           classNameTitle
         )}
       >
-        <Text bold size="large">
+        <Text bold size="lg">
           {title}
         </Text>
 
