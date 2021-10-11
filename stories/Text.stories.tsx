@@ -1,7 +1,7 @@
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
-import { Text } from "../src/components/Text";
+import { Text, TextProps } from "../src/components/Text";
 import { Row } from "./helpers/Row";
 import { Rows } from "./helpers/Rows";
 
@@ -31,20 +31,53 @@ const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 export const Default = Template.bind({});
 Default.args = {};
 
+export const XSmall = Template.bind({});
+XSmall.args = {
+  size: "xs",
+};
+XSmall.storyName = "xs";
+
 export const Small = Template.bind({});
 Small.args = {
-  size: "small",
+  size: "sm",
 };
+Small.storyName = "sm";
 
-export const Medium = Template.bind({});
-Medium.args = {
-  size: "medium",
+export const Base = Template.bind({});
+Base.args = {
+  size: "base",
 };
+Base.storyName = "base";
 
 export const Large = Template.bind({});
 Large.args = {
-  size: "large",
+  size: "lg",
 };
+Large.storyName = "lg";
+
+export const XLarge = Template.bind({});
+XLarge.args = {
+  size: "xl",
+};
+XLarge.storyName = "xl";
+
+export const XXLarge = Template.bind({});
+XXLarge.args = {
+  size: "2xl",
+};
+XXLarge.storyName = "2xl";
+
+export const XXXLarge = Template.bind({});
+XXXLarge.args = {
+  size: "3xl",
+};
+XXXLarge.storyName = "3xl";
+
+export const XXXXLarge = Template.bind({});
+XXXXLarge.args = {
+  size: "4xl",
+};
+XXXXLarge.storyName = "4xl";
 
 export const Danger = Template.bind({});
 Danger.args = {
@@ -71,247 +104,31 @@ Warning.args = {
   variant: "warning",
 };
 
+const stories: {
+  sizes: Array<TextProps["size"]>;
+  variants: Array<TextProps["variant"]>;
+} = {
+  sizes: ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl"],
+  variants: ["normal", "primary", "success", "warning", "danger", "muted"],
+};
+
 export const AllTexts = (): JSX.Element => {
   return (
     <Rows>
+      {stories.sizes.map((size) => (
+        <Row key={size}>
+          {stories.variants.map((variant) => (
+            <Text key={`${size}-${variant}`} size={size} variant={variant}>
+              {variant}
+            </Text>
+          ))}
+        </Row>
+      ))}
       <Row>
-        <Text size="small" variant="danger">
-          Danger
-        </Text>
-        <Text size="small" variant="muted">
-          Muted
-        </Text>
-        <Text size="small" variant="normal">
-          Normal
-        </Text>
-        <Text size="small" variant="primary">
-          Primary
-        </Text>
-        <Text size="small" variant="success">
-          Success
-        </Text>
-        <Text size="small" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text size="medium" variant="danger">
-          Danger
-        </Text>
-        <Text size="medium" variant="muted">
-          Muted
-        </Text>
-        <Text size="medium" variant="normal">
-          Normal
-        </Text>
-        <Text size="medium" variant="primary">
-          Primary
-        </Text>
-        <Text size="medium" variant="success">
-          Success
-        </Text>
-        <Text size="medium" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text size="large" variant="danger">
-          Danger
-        </Text>
-        <Text size="large" variant="muted">
-          Muted
-        </Text>
-        <Text size="large" variant="normal">
-          Normal
-        </Text>
-        <Text size="large" variant="primary">
-          Primary
-        </Text>
-        <Text size="large" variant="success">
-          Success
-        </Text>
-        <Text size="large" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold size="small" variant="danger">
-          Danger
-        </Text>
-        <Text bold size="small" variant="muted">
-          Muted
-        </Text>
-        <Text bold size="small" variant="normal">
-          Normal
-        </Text>
-        <Text bold size="small" variant="primary">
-          Primary
-        </Text>
-        <Text bold size="small" variant="success">
-          Success
-        </Text>
-        <Text bold size="small" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold size="medium" variant="danger">
-          Danger
-        </Text>
-        <Text bold size="medium" variant="muted">
-          Muted
-        </Text>
-        <Text bold size="medium" variant="normal">
-          Normal
-        </Text>
-        <Text bold size="medium" variant="primary">
-          Primary
-        </Text>
-        <Text bold size="medium" variant="success">
-          Success
-        </Text>
-        <Text bold size="medium" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold size="large" variant="danger">
-          Danger
-        </Text>
-        <Text bold size="large" variant="muted">
-          Muted
-        </Text>
-        <Text bold size="large" variant="normal">
-          Normal
-        </Text>
-        <Text bold size="large" variant="primary">
-          Primary
-        </Text>
-        <Text bold size="large" variant="success">
-          Success
-        </Text>
-        <Text bold size="large" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text italic size="small" variant="danger">
-          Danger
-        </Text>
-        <Text italic size="small" variant="muted">
-          Muted
-        </Text>
-        <Text italic size="small" variant="normal">
-          Normal
-        </Text>
-        <Text italic size="small" variant="primary">
-          Primary
-        </Text>
-        <Text italic size="small" variant="success">
-          Success
-        </Text>
-        <Text italic size="small" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text italic size="medium" variant="danger">
-          Danger
-        </Text>
-        <Text italic size="medium" variant="muted">
-          Muted
-        </Text>
-        <Text italic size="medium" variant="normal">
-          Normal
-        </Text>
-        <Text italic size="medium" variant="primary">
-          Primary
-        </Text>
-        <Text italic size="medium" variant="success">
-          Success
-        </Text>
-        <Text italic size="medium" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text italic size="large" variant="danger">
-          Danger
-        </Text>
-        <Text italic size="large" variant="muted">
-          Muted
-        </Text>
-        <Text italic size="large" variant="normal">
-          Normal
-        </Text>
-        <Text italic size="large" variant="primary">
-          Primary
-        </Text>
-        <Text italic size="large" variant="success">
-          Success
-        </Text>
-        <Text italic size="large" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold italic size="small" variant="danger">
-          Danger
-        </Text>
-        <Text bold italic size="small" variant="muted">
-          Muted
-        </Text>
-        <Text bold italic size="small" variant="normal">
-          Normal
-        </Text>
-        <Text bold italic size="small" variant="primary">
-          Primary
-        </Text>
-        <Text bold italic size="small" variant="success">
-          Success
-        </Text>
-        <Text bold italic size="small" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold italic size="medium" variant="danger">
-          Danger
-        </Text>
-        <Text bold italic size="medium" variant="muted">
-          Muted
-        </Text>
-        <Text bold italic size="medium" variant="normal">
-          Normal
-        </Text>
-        <Text bold italic size="medium" variant="primary">
-          Primary
-        </Text>
-        <Text bold italic size="medium" variant="success">
-          Success
-        </Text>
-        <Text bold italic size="medium" variant="warning">
-          Warning
-        </Text>
-      </Row>
-      <Row>
-        <Text bold italic size="large" variant="danger">
-          Danger
-        </Text>
-        <Text bold italic size="large" variant="muted">
-          Muted
-        </Text>
-        <Text bold italic size="large" variant="normal">
-          Normal
-        </Text>
-        <Text bold italic size="large" variant="primary">
-          Primary
-        </Text>
-        <Text bold italic size="large" variant="success">
-          Success
-        </Text>
-        <Text bold italic size="large" variant="warning">
-          Warning
+        <Text bold>Bold</Text>
+        <Text italic>Italic</Text>
+        <Text bold italic>
+          Bold Italic
         </Text>
       </Row>
     </Rows>
