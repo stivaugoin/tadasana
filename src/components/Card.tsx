@@ -10,7 +10,7 @@ export function Card({ children, className }: CardProps): JSX.Element {
   return (
     <div
       className={classnames(
-        "flex-shrink-0 w-full bg-white border border-gray-200 rounded-lg",
+        "flex-shrink-0 bg-white border border-gray-200 rounded-lg",
         className
       )}
     >
