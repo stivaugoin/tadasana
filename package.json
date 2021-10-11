@@ -1,6 +1,6 @@
 {
   "name": "tadasana",
-  "version": "1.0.1",
+  "version": "0.0.10",
   "license": "MIT",
   "author": "Steve Bourgoin",
   "main": "dist/index.js",
