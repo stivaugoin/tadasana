@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import React, { HTMLAttributes, ReactNode } from "react";
 
-interface TextProps extends HTMLAttributes<HTMLSpanElement> {
+export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   bold?: boolean;
   children: ReactNode;
   italic?: boolean;
-  size?: "large" | "medium" | "small";
+  size?: "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
   variant?: "danger" | "muted" | "normal" | "primary" | "success" | "warning";
 }
 
@@ -14,7 +14,7 @@ export function Text({
   children,
   className,
   italic = false,
-  size = "medium",
+  size = "base",
   variant = "normal",
   ...props
 }: TextProps): JSX.Element {
@@ -28,9 +28,14 @@ export function Text({
         [italic && "italic"],
 
         // Size
-        [size === "large" && "text-lg"],
-        [size === "medium" && "text-base"],
-        [size === "small" && "text-sm"],
+        [size === "xs" && "text-xs"],
+        [size === "sm" && "text-sm"],
+        [size === "base" && "text-base"],
+        [size === "lg" && "text-lg"],
+        [size === "xl" && "text-xl"],
+        [size === "2xl" && "text-2xl"],
+        [size === "3xl" && "text-3xl"],
+        [size === "4xl" && "text-4xl"],
 
         // Variant
         [variant === "danger" && "text-danger-500"],
