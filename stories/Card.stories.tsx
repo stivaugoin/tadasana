@@ -1,10 +1,10 @@
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
-import { DotsHorizontalIcon } from "@heroicons/react/solid";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Button } from "../src/components/Button";
 import { Card } from "../src/components/Card";
 import { Text } from "../src/components/Text";
+import { DotsHorizontalIcon } from "./helpers/Icons";
 
 export default {
   title: "Component/Card",
