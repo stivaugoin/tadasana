@@ -34,21 +34,23 @@
   "size-limit": [
     {
       "path": "dist/tadasana.cjs.production.min.js",
-      "limit": "100 KB"
+      "limit": "20 KB"
     },
     {
       "path": "dist/tadasana.esm.js",
-      "limit": "100 KB"
+      "limit": "20 KB"
     }
   ],
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "react-dom": ">=16",
+    "@headlessui/react": "^1.4.1",
+    "tailwindcss": ">=2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@geometricpanda/storybook-addon-badges": "^0.2.1",
     "@headlessui/react": "^1.4.1",
-    "@heroicons/react": "^1.0.4",
     "@size-limit/preset-small-lib": "^5.0.3",
     "@storybook/addon-essentials": "^6.3.8",
     "@storybook/addon-info": "^5.3.21",

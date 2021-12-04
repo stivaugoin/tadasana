@@ -4,7 +4,7 @@ import React, { HTMLAttributes } from "react";
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: string;
   size?: "large" | "small";
-  startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
+  startIcon?: React.ComponentType<React.ComponentProps<"svg">> | any;
   variant?: "danger" | "normal" | "primary" | "success" | "warning";
 }
 

@@ -1,8 +1,8 @@
 import { BADGE } from "@geometricpanda/storybook-addon-badges";
-import { CodeIcon } from "@heroicons/react/solid";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import { Badge } from "../src/components/Badge";
+import { CodeIcon } from "./helpers/Icons";
 import { Row } from "./helpers/Row";
 import { Rows } from "./helpers/Rows";
 
