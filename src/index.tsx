@@ -5,4 +5,5 @@ export { Input } from "./components/Input";
 export { Label } from "./components/Label";
 export { Modal } from "./components/Modal";
 export { Text } from "./components/Text";
+export { TextArea } from "./components/TextArea";
 export { useModal } from "./hooks/useModal";
