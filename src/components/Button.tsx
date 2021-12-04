@@ -7,7 +7,7 @@ export interface ButtonProps
     HTMLButtonElement
   > {
   size?: "large" | "medium" | "small";
-  startIcon?: React.ComponentType<React.ComponentProps<"svg">>;
+  startIcon?: React.ComponentType<React.ComponentProps<"svg">> | any;
   type?: "button" | "reset" | "submit";
   variant?: "danger" | "normal" | "primary" | "success" | "warning";
 }
