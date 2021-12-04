@@ -4,6 +4,7 @@ export { Card } from "./components/Card";
 export { Input } from "./components/Input";
 export { Label } from "./components/Label";
 export { Modal } from "./components/Modal";
+export { Tabs } from "./components/Tabs";
 export { Text } from "./components/Text";
 export { TextArea } from "./components/TextArea";
 export { useModal } from "./hooks/useModal";
