@@ -1,65 +1,77 @@
-<br/>
-<p align="center">
-  <a href="https://github.com/stivaugoin/tadasana">
-    <img src="images/tadasana.png" alt="Logo" height="80">
-  </a>
+# Turborepo starter
 
-  <p align="center">
-    Design system based on Tailwind CSS
-    <br/>
-    <br/>
-    <a href="https://main--614a7f31a4fdfd003a07d4a0.chromatic.com/"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-  </p>
-  
-  <div align="center">
-  
-![npm](https://img.shields.io/npm/v/tadasana)
-![npm](https://img.shields.io/npm/dw/tadasana)
+This is an official Yarn v1 starter turborepo.
 
-[![CI](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/main.yml)
-[![Chromatic](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/chromatic.yml)
-[![size](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml/badge.svg)](https://github.com/stivaugoin/tadasana/actions/workflows/size.yml)
+## What's inside?
 
-  </div>
-</p>
+This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
 
-:warning: Tadasana is not ready to use in production.
+### Apps and Packages
 
-## Getting Started
+- `docs`: a [Next.js](https://nextjs.org) app
+- `web`: another [Next.js](https://nextjs.org) app
+- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-### Prerequisites
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-Tadasana does not come with TailwindCSS, you have to install it yourself on your project.
+### Utilities
 
-- [TailwindCSS](https://tailwindcss.com/docs/installation) >= 2.2
-- [React](https://reactjs.org/) >= 16
+This turborepo has some additional tools already setup for you:
 
-### Installation
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-You can install Tadasana with [NPM](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com).
+## Setup
 
-```shell
-npm install --save tadasana
+This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+cd my-turborepo
+yarn run build
 ```
 
-or
+### Develop
 
-```shell
-yarn add tadasana
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+yarn run dev
 ```
 
-## Usage
+### Remote Caching
 
-```js
-// tailwind.config.js
+Turborepo can use a technique known as [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
 
-module.exports = {
-  presets: [require("./node_modules/tadasana/src/tailwind/preset.ts")],
-  purge: [
-    "./node_modules/tadasana/src/components/*.tsx",
-    "./src/**/*.tsx", // <- Your path
-  ],
-};
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+
 ```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
+- [Caching](https://turborepo.org/docs/core-concepts/caching)
+- [Remote Caching](https://turborepo.org/docs/core-concepts/remote-caching)
+- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
+- [Configuration Options](https://turborepo.org/docs/reference/configuration)
+- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)

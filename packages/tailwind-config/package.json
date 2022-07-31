@@ -1,0 +1,11 @@
+{
+  "name": "@tadasana/tailwind-config",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
