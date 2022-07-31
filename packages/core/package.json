@@ -1,0 +1,33 @@
+{
+  "name": "@tadasana/core",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:css && yarn build:lib",
+    "build:css": "tailwindcss -m -i ./src/styles.css -o dist/styles.css",
+    "build:lib": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "dev": "concurrently \"yarn dev:css\" \"yarn dev:lib\"",
+    "dev:css": "tailwindcss -w -i ./src/styles.css -o dist/styles.css",
+    "dev:lib": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+    "lint": "eslint *.ts*"
+  },
+  "devDependencies": {
+    "@tadasana/tailwind-config": "*",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "concurrently": "^7.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "*",
+    "react": "^17.0.2",
+    "tsconfig": "*",
+    "tsup": "^6.2.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
