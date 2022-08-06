@@ -36,3 +36,4 @@ build-storybook.log
 # build
 dist
 /apps/storybook/storybook-static
+/apps/web/styles/output.css

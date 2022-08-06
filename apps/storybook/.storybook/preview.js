@@ -1,4 +1,4 @@
-import "@tadasana/core/dist/styles.css";
+import "../../../packages/core/dist/styles.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
