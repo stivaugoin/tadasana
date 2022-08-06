@@ -13,3 +13,15 @@ Base.args = {
   children: "Button",
   variant: "normal",
 };
+
+export const Small = Template.bind({});
+Small.args = {
+  children: "Button",
+  size: "sm",
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  children: "Button",
+  size: "sm",
+};
