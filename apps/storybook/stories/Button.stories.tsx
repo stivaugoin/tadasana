@@ -17,6 +17,7 @@ export const Small = Template.bind({});
 Small.args = {
   children: "Button",
   size: "sm",
+  variant: "primary",
 };
 
 export const Medium = Template.bind({});
