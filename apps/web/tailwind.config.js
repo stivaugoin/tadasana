@@ -1,7 +1,16 @@
-const config = require("@tadasana/tailwind-config/tailwind.config.js");
+const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  ...config,
-  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "../../packages/core/src/**/*.{ts,tsx}",
+  ],
+  presets: [require("@tadasana/tailwind-config")],
+  theme: {
+    colors: {
+      primary: colors.purple,
+    },
+  },
 };
