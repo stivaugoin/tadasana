@@ -1,3 +1,6 @@
-const config = require("@tadasana/tailwind-config/tailwind.config.js");
+/** @type {import('tailwindcss').Config} */
 
-module.exports = { ...config, content: ["src/**/*.{ts,tsx}"] };
+module.exports = {
+  content: ["src/**/*.{ts,tsx}"],
+  presets: [require("@tadasana/tailwind-config")],
+};
