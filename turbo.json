@@ -6,14 +6,15 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "build-storybook": {
+      "dependsOn": ["build"]
+    },
     "chromatic": {
       "dependsOn": ["build"]
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "publish": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["build"],
       "outputs": []
     },
     "dev": {
