@@ -9,11 +9,12 @@
     "build-storybook": {
       "dependsOn": ["build"]
     },
-    "lint": {
-      "outputs": []
+    "chromatic": {
+      "dependsOn": ["build"]
     },
+    "lint": {},
     "publish": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["build"],
       "outputs": []
     },
     "dev": {
