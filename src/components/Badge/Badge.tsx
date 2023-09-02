@@ -4,6 +4,6 @@ interface BadgeProps {
   variant?: "primary" | "default" | "success" | "danger" | "warning";
 }
 
-export function Badge({ label, size, variant }: BadgeProps) {
-  return <div>{label}</div>;
+export function Badge({ label }: BadgeProps) {
+  return <div className="bg-primary-500">{label}</div>;
 }

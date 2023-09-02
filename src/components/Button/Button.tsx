@@ -8,5 +8,9 @@ export function Button({
   variant = "default",
   ...props
 }: ButtonProps) {
-  return <button {...props}>Button</button>;
+  return (
+    <button {...props}>
+      Button ({variant} - {size})
+    </button>
+  );
 }

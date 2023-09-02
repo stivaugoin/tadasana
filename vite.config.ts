@@ -1,16 +1,35 @@
-import { defineConfig } from "vite";
-import path from "path";
 import react from "@vitejs/plugin-react";
+import path from "path";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
+
+const resolvePath = (str: string) => path.resolve(__dirname, str);
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/components/index.ts"),
+      entry: resolvePath("src/index.ts"),
       name: "Tadasana",
-      fileName: (format) => `tadasana.${format}.js`,
+      fileName: "tadasana",
+    },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
   },
 
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      exclude: ["**/*.stories.tsx"],
+      insertTypesEntry: true,
+      rollupTypes: true,
+    }),
+  ],
 });
