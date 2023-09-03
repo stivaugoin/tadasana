@@ -4,6 +4,7 @@ import { Badge } from "./Badge";
 
 const meta: Meta<typeof Badge> = {
   component: Badge,
+  title: "Components/Badge",
   args: {
     label: "Badge",
   },

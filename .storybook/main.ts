@@ -8,7 +8,10 @@ const config: StorybookConfig = {
   ],
   docs: { autodocs: true },
   framework: "@storybook/react-vite",
-  stories: ["../src/components/**/*.stories.tsx"],
+  stories: [
+    "../src/components/**/*.stories.tsx",
+    "../src/documentation/**/*.stories.mdx",
+  ],
 };
 
 export default config;

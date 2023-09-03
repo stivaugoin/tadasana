@@ -1,0 +1,42 @@
+import { ColorPalette, ColorItem, Markdown, Meta } from "@storybook/blocks";
+import presets from "../../tailwind/preset";
+import customize from "./customize.md?raw";
+
+<Meta title="Theme/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="Primary"
+    subtitle="e.g. bg-primary-500"
+    colors={presets.theme.colors.primary}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="e.g. bg-secondary-500"
+    colors={presets.theme.colors.secondary}
+  />
+  <ColorItem
+    title="Default"
+    subtitle="e.g. bg-default-500"
+    colors={presets.theme.colors.default}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="e.g. bg-success-500"
+    colors={presets.theme.colors.success}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="e.g. bg-warning-500"
+    colors={presets.theme.colors.warning}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="e.g. bg-danger-500"
+    colors={presets.theme.colors.danger}
+  />
+</ColorPalette>
+
+<Markdown>{customize}</Markdown>

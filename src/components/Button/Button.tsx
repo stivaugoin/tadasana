@@ -9,7 +9,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button {...props}>
+    <button className="bg-default-500" {...props}>
       Button ({variant} - {size})
     </button>
   );
