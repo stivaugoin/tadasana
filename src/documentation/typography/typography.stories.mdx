@@ -1,0 +1,47 @@
+import { Markdown, Meta, Typeset } from "@storybook/blocks";
+import presets from "../../tailwind/preset";
+
+<Meta title="Theme/Typography" />
+
+# Typography
+
+Use typography to create a hierarchy of content. The design system uses two fonts: Rubik and Montserrat.
+In general, use Rubik for body text and UI elements, and Montserrat for headings.
+
+## Rubik
+
+Rubik is the primary font used in the design system. It is used for body text, and UI elements.
+
+### Normal (400)
+
+<Typeset
+  fontSizes={Object.entries(presets.theme.fontSize)
+    .filter(([name]) => ["xs", "sm", "md", "lg", "xl"].includes(name))
+    .map(([, size]) => Number(size[0].replace("rem", "") * 16) + "px")}
+  fontFamily={presets.theme.fontFamily.rubik}
+  fontWeight={presets.theme.fontWeight.normal}
+/>
+
+### Semibold (500)
+
+<Typeset
+  fontSizes={Object.entries(presets.theme.fontSize)
+    .filter(([name]) => ["xs", "sm", "md", "lg", "xl"].includes(name))
+    .map(([, size]) => Number(size[0].replace("rem", "") * 16) + "px")}
+  fontFamily={presets.theme.fontFamily.rubik}
+  fontWeight={presets.theme.fontWeight.semibold}
+/>
+
+## Montserrat
+
+Montserrat is the secondary font used in the design system. It is used for headings.
+
+### Normal (500)
+
+<Typeset
+  fontSizes={Object.entries(presets.theme.fontSize)
+    .filter(([name]) => !["xs", "sm", "md", "lg", "xl"].includes(name))
+    .map(([, size]) => Number(size[0].replace("rem", "") * 16) + "px")}
+  fontFamily={presets.theme.fontFamily.montserrat}
+  fontWeight={presets.theme.fontWeight.normal}
+/>
