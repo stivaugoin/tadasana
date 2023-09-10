@@ -2,6 +2,11 @@ import type { Config } from "tailwindcss";
 import tailwindPreset from "./src/tailwind/preset";
 
 export default {
-  content: ["./src/**/*.tsx", "./src/**/*.mdx"],
+  content: [
+    ".storybook/Decorator.tsx",
+    "./src/**/*.tsx",
+    "./src/**/*.mdx",
+    ...tailwindPreset.content,
+  ],
   presets: [tailwindPreset],
 } satisfies Config;

@@ -4,17 +4,8 @@ import { Decorator } from "./Decorator";
 import "../src/global.css";
 
 const preview: Preview = {
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
-    docs: {
-      toc: true,
-    },
+  argTypes: {
+    variant: { control: { type: "inline-radio" } },
   },
   decorators: [Decorator],
 };
