@@ -12,7 +12,7 @@ export function Button({
   variant = "default",
   ...props
 }: ButtonProps) {
-  const typography = useTypography({ size: "sm" });
+  const typography = useTypography({ bold: true, size: "sm" });
 
   return (
     <button
