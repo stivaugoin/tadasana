@@ -8,12 +8,12 @@ const meta: Meta<typeof Button> = {
   parameters: {
     docs: {
       description: {
-        component: "A button component.",
+        component: "Allows users to perform actions.",
       },
     },
   },
   args: {
-    children: "Button text",
+    children: "Click me!",
   },
 };
 
