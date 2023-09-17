@@ -5,6 +5,8 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@geometricpanda/storybook-addon-badges",
+    "@storybook/addon-a11y",
   ],
   docs: { autodocs: true },
   framework: "@storybook/react-vite",
@@ -12,6 +14,12 @@ const config: StorybookConfig = {
     "../src/components/**/*.stories.tsx",
     "../src/documentation/**/*.stories.mdx",
   ],
+  typescript: {
+    reactDocgenTypescriptOptions: {
+      shouldRemoveUndefinedFromOptional: true,
+      skipChildrenPropWithoutDoc: false,
+    },
+  },
 };
 
 export default config;

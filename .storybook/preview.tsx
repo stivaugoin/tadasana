@@ -4,9 +4,15 @@ import { Decorator } from "./Decorator";
 import "../src/global.css";
 
 const preview: Preview = {
-  argTypes: {
-    variant: { control: { type: "inline-radio" } },
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
   },
+
   decorators: [Decorator],
 };
 

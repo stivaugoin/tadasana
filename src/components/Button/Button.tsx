@@ -3,7 +3,10 @@ import { twMerge } from "tailwind-merge";
 import { useTypography } from "../../hooks/useTypography";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Button label */
   children: React.ReactNode;
+
+  /** Controls the button's appearance */
   variant?: "default" | "primary" | "danger";
 }
 
@@ -26,9 +29,9 @@ export function Button({
             // Variants
             "text-default-900 ring-1 ring-inset ring-default-300 hover:bg-default-50 focus-visible:outline-default-300":
               variant === "default",
-            "text-white bg-primary-600 hover:bg-primary-500 focus-visible:outline-primary-600":
+            "text-white bg-primary-700 hover:bg-primary-800 focus-visible:outline-primary-700":
               variant === "primary",
-            "text-white bg-danger-600 hover:bg-danger-500 focus-visible:outline-danger-600":
+            "text-white bg-danger-600 hover:bg-danger-700 focus-visible:outline-danger-600":
               variant === "danger",
           },
         ),

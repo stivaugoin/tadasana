@@ -31,6 +31,8 @@
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
+    "@geometricpanda/storybook-addon-badges": "^2.0.0",
+    "@storybook/addon-a11y": "^7.4.2",
     "@storybook/addon-essentials": "^7.4.0",
     "@storybook/addon-interactions": "^7.4.0",
     "@storybook/addon-links": "^7.4.0",
