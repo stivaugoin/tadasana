@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import { useTypography } from "../../hooks/useTypography";
+import { useTypography } from "../../../hooks/useTypography";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Button label */

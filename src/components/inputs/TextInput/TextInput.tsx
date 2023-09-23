@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef, useId } from "react";
 import { twMerge } from "tailwind-merge";
-import { useTypography } from "../../hooks/useTypography";
+import { useTypography } from "../../../hooks/useTypography";
 
 type HTMLInputProps = Omit<ComponentPropsWithoutRef<"input">, "onChange">;
 

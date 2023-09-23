@@ -1,3 +1,5 @@
+import { BADGE } from "@geometricpanda/storybook-addon-badges";
+
 import { Meta, StoryObj } from "@storybook/react";
 import { TextInput } from "./TextInput";
 
@@ -7,6 +9,10 @@ const meta: Meta<typeof TextInput> = {
 
   args: {
     label: "Label",
+  },
+
+  parameters: {
+    badges: [BADGE.BETA],
   },
 };
 

@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: "Components/Button",
+  title: "Buttons/Button",
 
   args: {
     children: "Click me!",
