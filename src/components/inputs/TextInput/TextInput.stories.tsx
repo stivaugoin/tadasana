@@ -11,6 +11,14 @@ const meta: Meta<typeof TextInput> = {
     label: "Label",
   },
 
+  decorators: [
+    (Story) => (
+      <div className="w-full max-w-xs">
+        <Story />
+      </div>
+    ),
+  ],
+
   parameters: {
     badges: [BADGE.BETA],
   },
@@ -23,12 +31,10 @@ export const Base: Story = {};
 
 export const Error: Story = {
   args: { error: "Error message" },
-  name: "With Error",
 };
 
 export const Placeholder: Story = {
   args: { placeholder: "Placeholder" },
-  name: "With Placeholder",
 };
 
 export const HideLabel: Story = {
