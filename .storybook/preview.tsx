@@ -3,14 +3,18 @@ import { Decorator } from "./Decorator";
 
 import "../src/global.css";
 
+const controls = {
+  matchers: {
+    color: /(background|color)$/i,
+    date: /Date$/,
+  },
+  sort: "requiredFirst",
+};
+
 const preview: Preview = {
   parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
+    docs: { controls },
+    controls,
   },
 
   decorators: [Decorator],
